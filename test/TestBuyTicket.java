@@ -29,7 +29,7 @@ public class TestBuyTicket {
 	}
 
 	@Test
-	public void insertOneEuroCent() throws IllegalCoinException {
+	public void shouldDisplay1MinFor1Cent() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 1; // In minutes
 		int coinValue = 1;
@@ -46,7 +46,7 @@ public class TestBuyTicket {
 	}
 
 	@Test // One coin
-	public void insertOneEuro() throws IllegalCoinException {
+	public void shouldDisplay40MinFor1Euro() throws IllegalCoinException {
 
 		// Arrange
 		int expectedParkingTime = 40; // In minutes
@@ -64,7 +64,7 @@ public class TestBuyTicket {
 	}
 
 	@Test // Multiple coins
-	public void insertMultipleEuroCoins() throws IllegalCoinException {
+	public void shouldDisplay41MinFor1EuroAnd1Cent() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 41; // In minutes
 
@@ -90,7 +90,7 @@ public class TestBuyTicket {
 	 */
 
 	@Test // One coin
-	public void insertOneDkkOre() throws IllegalCoinException {
+	public void shouldDisplay3minFor50Ore() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 3; // In minutes
 		int coinValue = 50;
@@ -107,7 +107,7 @@ public class TestBuyTicket {
 	}
 
 	@Test // One coin
-	public void insertOneDkk() throws IllegalCoinException {
+	public void shouldDisplay6MinFor1Dkk() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 6; // In minutes
 		int coinValue = 1;
@@ -124,7 +124,7 @@ public class TestBuyTicket {
 	}
 
 	@Test // Multiple coins
-	public void insertMultipleDkkCoins() throws IllegalCoinException {
+	public void shouldDisplay56MinFor10DkkAnd50Ore() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 56; // In minutes
 
@@ -150,7 +150,7 @@ public class TestBuyTicket {
 	 */
 
 	@Test
-	public void insertEurAndDkk() throws IllegalCoinException {
+	public void shouldDisplay94For1EuroAnd10Dkk() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 94; // In minutes
 
@@ -172,7 +172,7 @@ public class TestBuyTicket {
 	}
 
 	@Test
-	public void insertMultipleEurAndDkkCoins() throws IllegalCoinException {
+	public void shouldDisplay97MinFor1EuroAnd1CentAnd10DkkAnd50Ore() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 97; // In minutes
 
@@ -200,7 +200,7 @@ public class TestBuyTicket {
 	}
 
 	@Test(expected = IllegalCoinException.class)
-	public void insertOneNOK() throws IllegalCoinException {
+	public void shouldThrowIllegalCoinExceptionFromNokCurrency() throws IllegalCoinException {
 		// Arrange
 
 		int coinValue = 1;
@@ -213,7 +213,7 @@ public class TestBuyTicket {
 	}
 
 	@Test
-	public void insertEurAndNok() throws IllegalCoinException {
+	public void shouldDisplay40MinFor1EuroAnd1Nok() throws IllegalCoinException {
 
 		// Arrange
 		int expectedParkingTime = 40; // In minutes
@@ -243,7 +243,7 @@ public class TestBuyTicket {
 	}
 
 	@Test
-	public void insertDkkAndNok() throws IllegalCoinException {
+	public void shouldDisplay6MinFor1DkkAnd1Nok() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 6; // In minutes
 
@@ -271,7 +271,7 @@ public class TestBuyTicket {
 	}
 
 	@Test
-	public void insertMultipleCurrencies() throws IllegalCoinException {
+	public void shouldDisplay94MinFor1EuroAnd10DkkAnd1Nok() throws IllegalCoinException {
 		// Arrange
 		int expectedParkingTime = 94; // In minutes
 
@@ -303,7 +303,7 @@ public class TestBuyTicket {
 
 	
 	@Test
-	public void printRecipt() throws IllegalCoinException, DatabaseLayerException {
+	public void shouldPrintRecipt() throws IllegalCoinException, DatabaseLayerException {
 		//Arrange
 		int expectedValue = 40; // In minutes
 		PReceipt recipt = null; 
@@ -322,7 +322,7 @@ public class TestBuyTicket {
 	
 	
 	@Test
-	public void pressedIsPressed() throws IllegalCoinException {
+	public void shouldDisplay0MinWhenCancelIsPressed() throws IllegalCoinException {
 		//Arrange
 		int expectedParkingTime = 0; // In minutes
 		
