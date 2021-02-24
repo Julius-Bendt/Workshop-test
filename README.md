@@ -9,6 +9,7 @@ The code that have had tests written for, were delivered by our lecturers, but i
 2. Magnus Baggesen,
 3. [Michael Andreas Graversen](mailto:michael-graversen@hotmail.com),
 4. Mike Johansson,
+5. Nicolai Harms
 
 
 Made with :heart: in Aalborg, Denmark using Java and JUnit
